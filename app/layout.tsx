@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { PropsWithChildren } from "react";
+import Link from 'next/link';
+import { PropsWithChildren } from 'react';
 
-import "./globals.css";
+import './globals.css';
 
 export default function Layout({ children }: PropsWithChildren<{}>) {
   return (
@@ -16,13 +16,22 @@ export default function Layout({ children }: PropsWithChildren<{}>) {
           <nav>
             <ul>
               <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
                 <Link href="/dynamic/posts">Posts</Link>
               </li>
               <li>
                 <Link href="/dynamic/careers">Careers</Link>
               </li>
               <li>
+                <Link href="/suspense">Suspense</Link>
+              </li>
+              <li>
                 <Link href="/dynamic/about">About</Link>
+              </li>
+              <li>
+                <Link href="/about">About (static)</Link>
               </li>
             </ul>
           </nav>
