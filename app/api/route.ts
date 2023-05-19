@@ -1,14 +1,14 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+
+export const dynamic = 'force-dynamic'
+
+import { NextResponse } from 'next/server'
 
 type Data = {
   name: string
 }
 
-export default async function GET(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+export async function GET() {
   const delay = new Promise((res) => {
     setTimeout(() => {
       res(true)
@@ -17,5 +17,5 @@ export default async function GET(
 
   await delay
 
-  res.status(200).json({ name: 'John Doe' })
+  return NextResponse.json({ name: 'John Doe' })
 }

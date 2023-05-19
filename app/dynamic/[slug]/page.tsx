@@ -1,3 +1,5 @@
+import { baseUrl } from '../../../utils'
+
 interface Props {
   params: {
     slug: string
@@ -5,9 +7,19 @@ interface Props {
 }
 
 export default async function DynamicPage({ params }: Props) {
-  const res = await fetch('http://localhost:3000/api/hello', {
+  console.log(`${baseUrl}api/hello`)
+  const res = await fetch(`${baseUrl}api/`, {
     cache: 'no-store',
   })
 
-  return <h1>{params.slug}</h1>
+  const data = await res.json()
+
+  console.log(data)
+
+  return (
+    <h1>
+      {params.slug}
+      {data.name}
+    </h1>
+  )
 }

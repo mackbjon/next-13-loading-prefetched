@@ -1,11 +1,14 @@
 import React from 'react'
+import { baseUrl } from '../../utils'
 
 async function DynamicElement() {
-  const res = await fetch('http://localhost:3000/api/hello', {
+  const res = await fetch(`${baseUrl}api/`, {
     cache: 'no-store',
   })
 
-  return <h1>Suspense</h1>
+  const data = await res.json()
+
+  return <h1>{data.name}</h1>
 }
 
 export default async function DynamicPage() {
