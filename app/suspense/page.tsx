@@ -4,13 +4,13 @@ import { baseUrl } from '../../utils'
 export const runtime = 'edge'
 
 async function DynamicElement() {
-  const res = await fetch(`${baseUrl}api/`, {
-    cache: 'no-store',
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('success')
+    }, 4000)
   })
 
-  const data = await res.json()
-
-  return <h1>{data.name}</h1>
+  return <h1>{'John Doe'}</h1>
 }
 
 export default async function DynamicPage() {
