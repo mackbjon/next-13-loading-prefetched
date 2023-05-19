@@ -1,5 +1,4 @@
 import React from 'react'
-import { baseUrl } from '../../utils'
 
 export const runtime = 'edge'
 
