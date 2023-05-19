@@ -1,13 +1,13 @@
 interface Props {
   params: {
-    slug: string;
-  };
+    slug: string
+  }
 }
 
 export default async function DynamicPage({ params }: Props) {
   const res = await fetch('http://localhost:3000/api/hello', {
-    cache: 'no-cache',
-  });
+    cache: 'no-store',
+  })
 
-  return <h1>{params.slug}</h1>;
+  return <h1>{params.slug}</h1>
 }
