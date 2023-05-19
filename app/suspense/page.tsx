@@ -1,6 +1,8 @@
 import React from 'react'
 import { baseUrl } from '../../utils'
 
+export const runtime = 'edge'
+
 async function DynamicElement() {
   const res = await fetch(`${baseUrl}api/`, {
     cache: 'no-store',
