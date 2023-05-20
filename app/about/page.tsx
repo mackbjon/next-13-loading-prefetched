@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const runtime = 'edge'
 
 async function DynamicElement() {
@@ -14,9 +12,7 @@ async function DynamicElement() {
 
 export default async function DynamicPage() {
   return (
-    <React.Suspense fallback={<>Waiting to resolve...</>}>
-      {/* @ts-ignore */}
-      <DynamicElement />
-    </React.Suspense>
+    /* @ts-ignore */
+    <DynamicElement />
   )
 }
