@@ -1,7 +1,3 @@
-import { Suspense } from 'react'
-
-export const runtime = 'edge'
-
 async function DynamicElement() {
   await new Promise((resolve) => {
     setTimeout(() => {
@@ -12,11 +8,9 @@ async function DynamicElement() {
   return <h1>{'John Wick'}</h1>
 }
 
-export default async function DynamicPage() {
+export default function DynamicPage() {
   return (
-    <Suspense fallback={<>Waiting to resolve...</>}>
-      {/* @ts-ignore */}
-      <DynamicElement />
-    </Suspense>
+    /* @ts-ignore */
+    <DynamicElement />
   )
 }

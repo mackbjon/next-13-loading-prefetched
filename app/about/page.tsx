@@ -10,6 +10,6 @@
 //   return <h1>{'John Wick'}</h1>
 // }
 
-export default async function DynamicPage() {
+export default function About() {
   return <h1>Hi This is the about page!</h1>
 }
