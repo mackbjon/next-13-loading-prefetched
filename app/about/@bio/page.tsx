@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 async function DynamicElement() {
   await new Promise((resolve) => {
     setTimeout(() => {
