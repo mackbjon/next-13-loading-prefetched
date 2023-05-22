@@ -1,3 +1,5 @@
+export const runtime = 'edge'
+
 export default function Layout(props: {
   children?: React.ReactNode
   bio: React.ReactNode
