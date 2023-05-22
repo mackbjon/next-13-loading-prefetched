@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import Refresh from './Refresh'
 
 async function DynamicElement() {
@@ -13,10 +12,10 @@ async function DynamicElement() {
 
 export default function Bio() {
   return (
-    <Suspense fallback={<h2>Loading Bio...</h2>}>
+    <>
       {/* @ts-ignore */}
       <DynamicElement />
       <Refresh />
-    </Suspense>
+    </>
   )
 }
