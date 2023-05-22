@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { refreshAbout } from '../../actions'
+// import { refreshAbout } from '../../actions'
 import { useTransition } from 'react'
 
 export default function Bio() {
@@ -17,7 +17,7 @@ export default function Bio() {
           `text-sm text-gray-500 hover:text-gray-900`
         }
         // disabled={isPending}
-        onClick={() => refreshAbout()}
+        onClick={() => router.refresh()}
       >
         {/* {isPending ? 'Refreshing...' : 'Refresh'} */ 'Refresh'}
       </button>
