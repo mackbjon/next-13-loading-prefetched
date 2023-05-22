@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import Refresh from './Refresh'
 
-export const dynamic = 'force-dynamic'
+export const runtime = 'edge'
 
 async function DynamicElement() {
   await new Promise((resolve) => {
