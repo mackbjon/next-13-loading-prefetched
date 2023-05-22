@@ -18,16 +18,16 @@ export default function Layout({ children }: PropsWithChildren<{}>) {
               <li>
                 <Link href="/">Home</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/suspense">Suspense</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/about">About (static)</Link>
               </li>
             </ul>
           </nav>
 
-          <div>{children}</div>
+          {children}
         </div>
       </body>
     </html>

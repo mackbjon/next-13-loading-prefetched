@@ -1,18 +1,24 @@
+import { Suspense } from 'react'
+import Refresh from './Refresh'
+
 export const dynamic = 'force-dynamic'
 
 async function DynamicElement() {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve('success')
-    }, 2000)
+    }, 5000)
   })
 
-  return <h1>{'John Wick'}</h1>
+  return <h1>{`John Wick ${Math.random()}`}</h1>
 }
 
-export default function DynamicPage() {
+export default function Bio() {
   return (
-    /* @ts-ignore */
-    <DynamicElement />
+    <Suspense fallback={<h2>Loading Bio...</h2>}>
+      {/* @ts-ignore */}
+      <DynamicElement />
+      <Refresh />
+    </Suspense>
   )
 }

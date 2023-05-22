@@ -1,11 +1,12 @@
 export default function Layout(props: {
-  children: React.ReactNode
+  children?: React.ReactNode
   bio: React.ReactNode
+  description: React.ReactNode
 }) {
   return (
     <>
-      {props.children}
       {props.bio}
+      {props.description}
     </>
   )
 }
