@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import Refresh from './Refresh'
 
 async function DynamicElement() {

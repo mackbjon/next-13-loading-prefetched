@@ -1,5 +1,3 @@
-export const runtime = 'edge'
-
 export default function Layout(props: {
   children?: React.ReactNode
   bio: React.ReactNode
@@ -7,8 +5,8 @@ export default function Layout(props: {
 }) {
   return (
     <>
+      {props.children}
       {props.bio}
-      {props.description}
     </>
   )
 }
