@@ -1,6 +1,7 @@
 import Refresh from './Refresh'
 
 export const runtime = 'edge'
+export const dynamic = 'force-dynamic'
 
 async function DynamicElement() {
   await new Promise((resolve) => {
