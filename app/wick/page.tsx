@@ -1,6 +1,6 @@
-export const dynamic = 'force-dynamic'
-
 import Refresh from './Refresh'
+
+export const dynamic = 'force-dynamic'
 
 async function DynamicElement() {
   await new Promise((resolve) => {
