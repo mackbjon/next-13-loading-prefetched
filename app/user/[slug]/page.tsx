@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function About() {
+export default function User({ params }: { params: { slug: string } }) {
   return (
     <>
       <p>My about page!</p>

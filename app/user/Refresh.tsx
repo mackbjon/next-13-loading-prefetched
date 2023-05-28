@@ -1,10 +1,10 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { refreshAbout } from '../../../actions'
+import { refreshAbout } from '../actions'
 import { useTransition } from 'react'
 
-export default function Bio() {
+export default function Refresh() {
   const router = useRouter()
   // const [isPending, startTransition] = useTransition()
 

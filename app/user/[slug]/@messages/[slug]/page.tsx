@@ -1,5 +1,3 @@
-import Refresh from './Refresh'
-
 export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 
@@ -18,7 +16,6 @@ export default function Bio() {
     <>
       {/* @ts-ignore */}
       <DynamicElement />
-      <Refresh />
     </>
   )
 }
