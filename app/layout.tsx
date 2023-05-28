@@ -22,14 +22,7 @@ export default function Layout({ children }: PropsWithChildren<{}>) {
                 <Link href="/suspense">Suspense</Link>
               </li> */}
               <li>
-                <Link replace={true} href="/about">
-                  About (static)
-                </Link>
-              </li>
-              <li>
-                <Link replace={true} href="/about/biography">
-                  Biography
-                </Link>
+                <Link href="/user">User</Link>
               </li>
             </ul>
           </nav>

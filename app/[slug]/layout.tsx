@@ -1,4 +1,4 @@
-export const dynamic = 'force-static'
+import Refresh from './Refresh'
 
 export default function Layout(props: {
   children: React.ReactNode

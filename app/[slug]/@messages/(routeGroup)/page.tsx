@@ -5,10 +5,10 @@ async function DynamicElement() {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve('success')
-    }, 5000)
+    }, 4000)
   })
 
-  return <h1>{`John Wick ${Math.random()}`}</h1>
+  return <p>My message: {Math.random().toPrecision(3)}</p>
 }
 
 export default function Bio() {
