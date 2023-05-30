@@ -3,6 +3,8 @@ import { PropsWithChildren } from 'react'
 
 import './globals.css'
 
+export const dynamic = 'force-dynamic'
+
 export default function Layout({ children }: PropsWithChildren<{}>) {
   return (
     <html lang="en">
